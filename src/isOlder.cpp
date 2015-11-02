@@ -38,7 +38,7 @@ int isOlder(char *dob1, char *dob2) {
 				return -1;
 		}
 		else{
-			if (y1 % 4 == 0 && y1 % 400 == 0)
+			if (( y1 % 4 == 0 &&  y1%100!=0 )|| y1 % 400 == 0)
 			{
 				if (m1 == 2 && d1 > 29)
 					return -1;
@@ -56,7 +56,7 @@ int isOlder(char *dob1, char *dob2) {
 				return -1;
 		}
 		else{
-			if (y2 % 4 == 0 && y2 % 400 == 0)
+			if ((y2 % 4 == 0 &&  y2%100!=0  ) || y2 % 400 == 0)
 			{
 				if (m2 == 2 && d2 > 29)
 					return -1;
